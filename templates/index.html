@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ProMan</title>
+<script src="https://kit.fontawesome.com/05de84e1ca.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon/favicon.ico') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='favicon/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/design.css') }}">
+
+        <script type="module" src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+        <script type="module" src="{{ url_for('static', filename='js/dom.js') }}" defer></script>
+
+    </head>
+    <body>
+        <div class="user-account">
+            <div class="buttons">
+                <button id="logout-btn">Logout</button>
+                <button id="login-btn">Login</button>
+                <button id="register-btn">Registration</button>
+            </div>
+            <p id="welcome-user">You are logged in as </p>
+        </div>
+
+
+        <h1>ProMan</h1>
+        <div id="boards"></div>
+            <button id="new_board" >New Board</button>
+            <button id="new_private_board" >New Private Board</button>
+
+            <div id="new_board_div" style="display: none" >
+                <input id="new_board_input">
+                <button id="new_board_save">Save</button>
+            </div>
+
+
+        <div id="div_table"></div>
+
+
+        <div id="account-popup" class="popup">
+            <div class="container">
+                <h2 id="popup-header">Registration</h2>
+
+                <form id="user-form" name="user-form">
+                      <div class="form-group">
+                        <p id="error-msg"></p>
+                        <p id="confirmation-msg"></p>
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                      </div>
+                      <button id="submit-btn" type="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>
